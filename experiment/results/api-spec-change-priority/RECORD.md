@@ -22,9 +22,9 @@
 
 | フェーズ | CI (失敗/総数) | 作業時間 (分) | 変更ファイル | 追加行 | 削除行 | コミット数 | 手動バグ | メモ |
 |:---------|:---------------|:--------------|:-------------|:-------|:-------|:-----------|:---------|:-----|
-| ベースライン | | | | | | | | |
-| 更新直後 | | | | | | | | |
-| 修正後 | | | | | | | | |
+| ベースライン | 0/4 | | 0 | 0 | 0 | 0 | 0 | 変更なし（baseline 計測） |
+| 更新直後 | 0/4 | | 13 | 120 | 7 | 1 | 0 | PHPUnit/Newman 0失敗（非破壊的変更・テスト未修正でも緑） |
+| 修正後 | 0/4 | | 17 | 268 | 10 | 2 | 0 | 主指標: 17 files, +268/-10。API Controller 未変更 |
 
 ## フェーズ別詳細
 
@@ -53,9 +53,9 @@
 
 ```tsv
 repository	scenario	phase	recorded_at	phpunit_pass	phpunit_total	phpunit_pass_rate	newman_pass	newman_total	newman_pass_rate	phpstan_errors	eslint_ok	ci_jobs_failed	ci_jobs_total	work_minutes	files_changed	lines_added	lines_deleted	commits	manual_bugs	metrics_json	notes
-improved	api-spec-change-priority	baseline	20260703T065152Z	47	47	100.0	13	13	100.0	0	1			0	0	0			experiment/metrics/runs/run-20260703T065152Z/baseline.json	
-improved	api-spec-change-priority	after_update	20260703T065436Z	47	47	100.0	13	13	100.0	0	1			13	120	7			experiment/metrics/runs/run-20260703T065152Z/after_update.json	 13 files changed, 120 insertions(+), 7 deletions(-)
-improved	api-spec-change-priority	after_fix	20260703T065612Z	54	54	100.0	15	15	100.0	0	1			17	268	10			experiment/metrics/runs/run-20260703T065152Z/after_fix.json	 17 files changed, 268 insertions(+), 10 deletions(-)
+improved	api-spec-change-priority	baseline	20260703T065152Z	47	47	100.0	13	13	100.0	0	1	0	4		0	0	0	0	0	experiment/metrics/runs/run-20260703T065152Z/baseline.json	変更なし（baseline 計測）
+improved	api-spec-change-priority	after_update	20260703T065436Z	47	47	100.0	13	13	100.0	0	1	0	4		13	120	7	1	0	experiment/metrics/runs/run-20260703T065152Z/after_update.json	PHPUnit/Newman 0失敗（非破壊的変更・テスト未修正でも緑）
+improved	api-spec-change-priority	after_fix	20260703T065612Z	54	54	100.0	15	15	100.0	0	1	0	4		17	268	10	2	0	experiment/metrics/runs/run-20260703T065152Z/after_fix.json	主指標: 17 files, +268/-10。API Controller 未変更
 ```
 
 </details>
