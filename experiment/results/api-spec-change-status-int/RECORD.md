@@ -22,9 +22,9 @@
 
 | フェーズ | CI (失敗/総数) | 作業時間 (分) | 変更ファイル | 追加行 | 削除行 | コミット数 | 手動バグ | メモ |
 |:---------|:---------------|:--------------|:-------------|:-------|:-------|:-----------|:---------|:-----|
-| ベースライン | | | | | | | | |
-| 更新直後 | | | | | | | | |
-| 修正後 | | | | | | | | |
+| ベースライン | 0/4 | | 0 | 0 | 0 | 0 | 0 | 変更なし（baseline 計測） |
+| 更新直後 | 2/4 | | 11 | 65 | 16 | 1 | 0 | PHPUnit 17失敗・Newman 3失敗（テスト・Postman未修正） |
+| 修正後 | 0/4 | | 15 | 87 | 38 | 2 | 0 | 主指標: 15 files, +87/-38。Controller 未変更 |
 
 ## フェーズ別詳細
 
@@ -53,9 +53,9 @@
 
 ```tsv
 repository	scenario	phase	recorded_at	phpunit_pass	phpunit_total	phpunit_pass_rate	newman_pass	newman_total	newman_pass_rate	phpstan_errors	eslint_ok	ci_jobs_failed	ci_jobs_total	work_minutes	files_changed	lines_added	lines_deleted	commits	manual_bugs	metrics_json	notes
-improved	api-spec-change-status-int	baseline	20260703T062340Z	47	47	100.0	13	13	100.0	0	1			0	0	0			experiment/metrics/runs/run-20260703T062340Z/baseline.json	
-improved	api-spec-change-status-int	after_update	20260703T062501Z	30	47	63.83	10	13	76.92	0	1			11	65	16			experiment/metrics/runs/run-20260703T062340Z/after_update.json	 11 files changed, 65 insertions(+), 16 deletions(-)
-improved	api-spec-change-status-int	after_fix	20260703T062604Z	47	47	100.0	13	13	100.0	0	1			15	87	38			experiment/metrics/runs/run-20260703T062340Z/after_fix.json	 15 files changed, 87 insertions(+), 38 deletions(-)
+improved	api-spec-change-status-int	baseline	20260703T062340Z	47	47	100.0	13	13	100.0	0	1	0	4		0	0	0	0	0	experiment/metrics/runs/run-20260703T062340Z/baseline.json	変更なし（baseline 計測）
+improved	api-spec-change-status-int	after_update	20260703T062501Z	30	47	63.83	10	13	76.92	0	1	2	4		11	65	16	1	0	experiment/metrics/runs/run-20260703T062340Z/after_update.json	PHPUnit 17失敗・Newman 3失敗（テスト・Postman未修正）
+improved	api-spec-change-status-int	after_fix	20260703T062604Z	47	47	100.0	13	13	100.0	0	1	0	4		15	87	38	2	0	experiment/metrics/runs/run-20260703T062340Z/after_fix.json	主指標: 15 files, +87/-38。Controller 未変更
 ```
 
 </details>
