@@ -22,9 +22,9 @@
 
 | フェーズ | CI (失敗/総数) | 作業時間 (分) | 変更ファイル | 追加行 | 削除行 | コミット数 | 手動バグ | メモ |
 |:---------|:---------------|:--------------|:-------------|:-------|:-------|:-----------|:---------|:-----|
-| ベースライン | | | | | | | | |
-| 更新直後 | | | | | | | | |
-| 修正後 | | | | | | | | |
+| ベースライン | | | 0 | 0 | 0 | 0 | 0 | baseline 計測のみ |
+| 更新直後 | | | 1 | 1 | 1 | 1 | 0 | TaskRepository の LOWER 比較に変更 |
+| 修正後 | | | 2 | 34 | 1 | 3 | 0 | ケース無視テスト 2 件追加、check-quality 緑 |
 
 ## フェーズ別詳細
 
@@ -53,9 +53,9 @@
 
 ```tsv
 repository	scenario	phase	recorded_at	phpunit_pass	phpunit_total	phpunit_pass_rate	newman_pass	newman_total	newman_pass_rate	phpstan_errors	eslint_ok	ci_jobs_failed	ci_jobs_total	work_minutes	files_changed	lines_added	lines_deleted	commits	manual_bugs	metrics_json	notes
-improved	db-schema-change	baseline	20260704T044846Z	47	47	100.0	13	13	100.0	0	1			0	0	0			experiment/metrics/runs/run-20260704T044846Z/baseline.json	
-improved	db-schema-change	after_update	20260704T044903Z	47	47	100.0	13	13	100.0	0	1			1	1	1			experiment/metrics/runs/run-20260704T044846Z/after_update.json	 1 file changed, 1 insertion(+), 1 deletion(-)
-improved	db-schema-change	after_fix	20260704T044951Z	49	49	100.0	13	13	100.0	0	1			2	34	1			experiment/metrics/runs/run-20260704T044846Z/after_fix.json	 2 files changed, 34 insertions(+), 1 deletion(-)
+improved	db-schema-change	baseline	20260704T044846Z	47	47	100.0	13	13	100.0	0	1			0	0	0	0	0		experiment/metrics/runs/run-20260704T044846Z/baseline.json	baseline 計測のみ
+improved	db-schema-change	after_update	20260704T044903Z	47	47	100.0	13	13	100.0	0	1			1	1	1	1	0	experiment/metrics/runs/run-20260704T044846Z/after_update.json	TaskRepository の LOWER 比較に変更
+improved	db-schema-change	after_fix	20260704T044951Z	49	49	100.0	13	13	100.0	0	1			2	34	1	3	0	experiment/metrics/runs/run-20260704T044846Z/after_fix.json	ケース無視テスト 2 件追加、check-quality 緑
 ```
 
 </details>
