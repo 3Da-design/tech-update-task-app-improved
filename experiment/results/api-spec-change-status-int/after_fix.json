@@ -1,7 +1,7 @@
 {
   "run_id": "run-20260716T053143Z",
   "phase": "after_fix",
-  "recorded_at": "20260716T054945Z",
+  "recorded_at": "20260716T061622Z",
   "repository": "stack-s0",
   "phpstan": {
     "exit_code": 0,
@@ -35,9 +35,9 @@
   "git_app": {
     "diff_ref": "experiment-baseline-v1",
     "files_changed": 15,
-    "lines_added": 90,
-    "lines_deleted": 41,
-    "diff_shortstat": " 15 files changed, 90 insertions(+), 41 deletions(-)",
+    "lines_added": 87,
+    "lines_deleted": 38,
+    "diff_shortstat": " 15 files changed, 87 insertions(+), 38 deletions(-)",
     "excludes": [
       "experiment/results/",
       "experiment/metrics/"
@@ -58,9 +58,9 @@
   "git_backend": {
     "diff_ref": "experiment-baseline-v1",
     "files_changed": 12,
-    "lines_added": 83,
-    "lines_deleted": 34,
-    "diff_shortstat": " 12 files changed, 83 insertions(+), 34 deletions(-)",
+    "lines_added": 80,
+    "lines_deleted": 31,
+    "diff_shortstat": " 12 files changed, 80 insertions(+), 31 deletions(-)",
     "includes": [
       "app/",
       "routes/",
@@ -71,10 +71,10 @@
   },
   "git": {
     "diff_ref": "experiment-baseline-v1",
-    "files_changed": 15,
-    "lines_added": 90,
-    "lines_deleted": 41,
-    "diff_shortstat": " 15 files changed, 90 insertions(+), 41 deletions(-)",
+    "files_changed": 20,
+    "lines_added": 400,
+    "lines_deleted": 38,
+    "diff_shortstat": " 20 files changed, 400 insertions(+), 38 deletions(-)",
     "includes_experiment_metadata": true
   }
 }

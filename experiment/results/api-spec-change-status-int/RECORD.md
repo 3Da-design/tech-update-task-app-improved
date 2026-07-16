@@ -15,8 +15,8 @@
 | フェーズ | 記録時刻 | PHPUnit | Newman | PHPStan | ESLint |
 |:---------|:---------|:--------|:-------|:--------|:-------|
 | ベースライン | `20260716T053143Z` | 47/47 (100.0%) | 13/13 (100.0%) | 0 件 | OK |
-| 更新直後 | `20260716T054155Z` | 30/47 (63.8%) | 10/13 (76.9%) | 0 件 | OK |
-| 修正後 | `20260716T054945Z` | 47/47 (100.0%) | 13/13 (100.0%) | 0 件 | OK |
+| 更新直後 | `20260716T061504Z` | 30/47 (63.8%) | 10/13 (76.9%) | 0 件 | OK |
+| 修正後 | `20260716T061622Z` | 47/47 (100.0%) | 13/13 (100.0%) | 0 件 | OK |
 
 <a id="manual"></a>
 
@@ -43,19 +43,19 @@
 
 - **JSON:** [`after_update.json`](experiment/metrics/runs/run-20260716T053143Z/after_update.json)
 - **git diff_ref:** `experiment-baseline-v1`
-- **git_app（アプリ修正工数・主指標）:** 11 files, +68 / -19 (` 11 files changed, 68 insertions(+), 19 deletions(-)`)
+- **git_app（アプリ修正工数・主指標）:** 11 files, +65 / -16 (` 11 files changed, 65 insertions(+), 16 deletions(-)`)
 - **git_frontend（フロント別・第2章）:** 2 files, +5 / -5 (` 2 files changed, 5 insertions(+), 5 deletions(-)`)
-- **git_backend（バックエンド別・第2章）:** 9 files, +63 / -14 (` 9 files changed, 63 insertions(+), 14 deletions(-)`)
-- **git（実験メタデータ込み）:** 11 files, +68 / -19 (` 11 files changed, 68 insertions(+), 19 deletions(-)`)
+- **git_backend（バックエンド別・第2章）:** 9 files, +60 / -11 (` 9 files changed, 60 insertions(+), 11 deletions(-)`)
+- **git（実験メタデータ込み）:** 11 files, +65 / -16 (` 11 files changed, 65 insertions(+), 16 deletions(-)`)
 
 ### 修正後 (`after_fix`)
 
 - **JSON:** [`after_fix.json`](experiment/metrics/runs/run-20260716T053143Z/after_fix.json)
 - **git diff_ref:** `experiment-baseline-v1`
-- **git_app（アプリ修正工数・主指標）:** 15 files, +90 / -41 (` 15 files changed, 90 insertions(+), 41 deletions(-)`)
+- **git_app（アプリ修正工数・主指標）:** 15 files, +87 / -38 (` 15 files changed, 87 insertions(+), 38 deletions(-)`)
 - **git_frontend（フロント別・第2章）:** 2 files, +5 / -5 (` 2 files changed, 5 insertions(+), 5 deletions(-)`)
-- **git_backend（バックエンド別・第2章）:** 12 files, +83 / -34 (` 12 files changed, 83 insertions(+), 34 deletions(-)`)
-- **git（実験メタデータ込み）:** 15 files, +90 / -41 (` 15 files changed, 90 insertions(+), 41 deletions(-)`)
+- **git_backend（バックエンド別・第2章）:** 12 files, +80 / -31 (` 12 files changed, 80 insertions(+), 31 deletions(-)`)
+- **git（実験メタデータ込み）:** 20 files, +400 / -38 (` 20 files changed, 400 insertions(+), 38 deletions(-)`)
 
 <a id="tsv"></a>
 
@@ -65,8 +65,8 @@
 ```tsv
 repository	scenario	phase	recorded_at	phpunit_pass	phpunit_total	phpunit_pass_rate	newman_pass	newman_total	newman_pass_rate	phpstan_errors	eslint_ok	ci_jobs_failed	ci_jobs_total	work_minutes	app_files_changed	app_lines_added	app_lines_deleted	frontend_files_changed	frontend_lines_added	frontend_lines_deleted	backend_files_changed	backend_lines_added	backend_lines_deleted	meta_files_changed	meta_lines_added	meta_lines_deleted	commits	manual_bugs	metrics_json	notes
 stack-s0	api-spec-change-status-int	baseline	20260716T053143Z	47	47	100.0	13	13	100.0	0	1				0	0	0	0	0	0	0	0	0	0	0	0			experiment/metrics/runs/run-20260716T053143Z/baseline.json	
-stack-s0	api-spec-change-status-int	after_update	20260716T054155Z	30	47	63.83	10	13	76.92	0	1				11	68	19	2	5	5	9	63	14	11	68	19			experiment/metrics/runs/run-20260716T053143Z/after_update.json	 11 files changed, 68 insertions(+), 19 deletions(-)
-stack-s0	api-spec-change-status-int	after_fix	20260716T054945Z	47	47	100.0	13	13	100.0	0	1				15	90	41	2	5	5	12	83	34	15	90	41			experiment/metrics/runs/run-20260716T053143Z/after_fix.json	 15 files changed, 90 insertions(+), 41 deletions(-)
+stack-s0	api-spec-change-status-int	after_update	20260716T061504Z	30	47	63.83	10	13	76.92	0	1				11	65	16	2	5	5	9	60	11	11	65	16			experiment/metrics/runs/run-20260716T053143Z/after_update.json	 11 files changed, 65 insertions(+), 16 deletions(-)
+stack-s0	api-spec-change-status-int	after_fix	20260716T061622Z	47	47	100.0	13	13	100.0	0	1				15	87	38	2	5	5	12	80	31	20	400	38			experiment/metrics/runs/run-20260716T053143Z/after_fix.json	 15 files changed, 87 insertions(+), 38 deletions(-)
 ```
 
 </details>
