@@ -40,16 +40,24 @@
 | Web（Laravel/nginx） | `http://localhost:8000` |
 | Vite dev | `http://localhost:5173` |
 | DB 公開ポート | `5432` |
-| Compose 名 | `tech-update-task-app` |
+| Compose 名 | `tech-update-task-app-improved`（ディレクトリ名由来） |
 | コンテナ名 | `tech-update-task-app-{php,node,nginx,postgres}` |
 | シードユーザー | `test@example.com` / `password` |
 
 ### 初回セットアップ
 
 ```bash
-docker compose up -d
-docker compose exec app composer setup   # install〜key:generate〜migrate〜フロントビルドまで一括
+cp .env.example .env
+docker compose up -d                                # vendor が無ければ entrypoint が composer install
+docker compose exec app php artisan key:generate
+docker compose exec app php artisan migrate --seed
+composer npm:docker-build                           # ★ホストで実行（中身は node コンテナでの npm ci + build）
 ```
+
+**`composer setup` を単体で使わないこと。** 実行場所がどちらでも完走しない：
+コンテナ内（`docker compose exec app composer setup`）だと最終段 `npm:docker-build` が `docker` を呼ぶため `command not found` で落ち、
+ホストだと `composer install` がホストの PHP で依存解決され、コンテナの PHP 8.4 とズレる。
+上記のとおり **DB 操作はコンテナ内 / フロントビルドはホスト** に分けて実行する。
 
 ### よく使うコマンド
 
