@@ -1,0 +1,80 @@
+{
+  "run_id": "run-20260716T053143Z",
+  "phase": "after_fix",
+  "recorded_at": "20260716T054945Z",
+  "repository": "stack-s0",
+  "phpstan": {
+    "exit_code": 0,
+    "error_count": 0,
+    "ok": true
+  },
+  "eslint": {
+    "exit_code": 0,
+    "ok": true
+  },
+  "vite_build": {
+    "exit_code": 0,
+    "ok": true
+  },
+  "phpunit": {
+    "exit_code": 0,
+    "pass": 47,
+    "fail": 0,
+    "total": 47,
+    "pass_rate": 100.0,
+    "ok": true
+  },
+  "newman": {
+    "exit_code": 0,
+    "pass": 13,
+    "fail": 0,
+    "total": 13,
+    "pass_rate": 100.0,
+    "ok": true
+  },
+  "git_app": {
+    "diff_ref": "experiment-baseline-v1",
+    "files_changed": 15,
+    "lines_added": 90,
+    "lines_deleted": 41,
+    "diff_shortstat": " 15 files changed, 90 insertions(+), 41 deletions(-)",
+    "excludes": [
+      "experiment/results/",
+      "experiment/metrics/"
+    ]
+  },
+  "git_frontend": {
+    "diff_ref": "experiment-baseline-v1",
+    "files_changed": 2,
+    "lines_added": 5,
+    "lines_deleted": 5,
+    "diff_shortstat": " 2 files changed, 5 insertions(+), 5 deletions(-)",
+    "includes": [
+      "resources/views/",
+      "resources/js/",
+      "resources/css/"
+    ]
+  },
+  "git_backend": {
+    "diff_ref": "experiment-baseline-v1",
+    "files_changed": 12,
+    "lines_added": 83,
+    "lines_deleted": 34,
+    "diff_shortstat": " 12 files changed, 83 insertions(+), 34 deletions(-)",
+    "includes": [
+      "app/",
+      "routes/",
+      "database/",
+      "config/",
+      "tests/"
+    ]
+  },
+  "git": {
+    "diff_ref": "experiment-baseline-v1",
+    "files_changed": 15,
+    "lines_added": 90,
+    "lines_deleted": 41,
+    "diff_shortstat": " 15 files changed, 90 insertions(+), 41 deletions(-)",
+    "includes_experiment_metadata": true
+  }
+}
