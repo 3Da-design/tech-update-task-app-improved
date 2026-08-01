@@ -26,7 +26,7 @@
 |:---------|:---------------|:--------------|:-------------------|:-------------|:-------------|:-----------|:---------|:-----|
 | ベースライン | 4/4 | 5 | 0 | 0 | 0 | 1 | 0 | タグと差分ゼロの anchor コミット（`a059298`）。CI 4ジョブ緑（PHPUnit 47/47・Newman 13/13・PHPStan 0・ESLint OK） |
 | 更新直後 | 4/4 | 46 | 13 | 114 | 7 | 1 | 0 | 実装のみ（`25a511c`、tests/Postman 未修正）。`priority` は**非破壊的な属性追加**のため既存テストが全通過し、CI 4ジョブとも緑（PHPUnit 47/47・Newman 13/13）。status 数値化シナリオと違いテスト赤が出ない点に注意 |
-| 修正後 |  | 29 | 17 | 262 | 10 | 1 | 0 | tests 3ファイル＋Postman に priority のフィルタ/ソート検証を追加（`00ac775`、tests/postman のみ・実装修正なし）。ローカル `check-quality.sh` 一発緑（PHPUnit 54/54・Newman 15/15・PHPStan 0・ESLint OK）。**未 push のため CI 未実行** |
+| 修正後 | 4/4 | 29 | 17 | 262 | 10 | 1 | 0 | tests 3ファイル＋Postman に priority のフィルタ/ソート検証を追加（`00ac775`、tests/postman のみ・実装修正なし）。ローカル `check-quality.sh` 一発緑（PHPUnit 54/54・Newman 15/15・PHPStan 0・ESLint OK）。CI 4ジョブ緑（`c77ba0c` / run 30692091874） |
 
 ## フェーズ別詳細
 
