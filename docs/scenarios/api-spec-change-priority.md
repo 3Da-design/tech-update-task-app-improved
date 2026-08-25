@@ -254,7 +254,7 @@ return [
 
 **Step 2-7.** `app/Http/Requests/StoreTaskRequest.php` — `rules()` 行 26–31
 
-- **解説:** 省略時は DB デフォルト、送信時のみ検証。
+- **解説:** 作成時は `title` / `status` を必須のまま維持する（`sometimes` は付けない。付けると title 未送信でも検証を素通りし NOT NULL 違反になる）。追加する `priority` のみ任意（`nullable`）で、省略時は DB デフォルト `medium`。
 - **変更後（rules 全体）:**
 
 ```php
